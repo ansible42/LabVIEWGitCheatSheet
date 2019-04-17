@@ -2,7 +2,7 @@
 
 ## Typical Workflow ##
 
-![MgaV9.png](https://bitbucket.org/repo/XXLgzkp/images/2037853081-MgaV9.png)
+![MgaV9.png](https://github.com/ansible42/takednGitCheatSheet/blob/master/2037853081-MgaV9.png)
 
 
 ``` git pull ``` reaches out to the remote and pulls the latest version down, will trigger a merge if there are conflicts 
