@@ -1,4 +1,4 @@
-## Setup your git for LabVIEW development 
+# Setup your git for LabVIEW development 
 
 *   [Install git](https://git-scm.com/downloads)
 *   [Clone, comile and install VICompare tool](https://github.com/smithed/vicompare) 
@@ -23,3 +23,5 @@
 
 ```
  
+
+### NOTE:: if you do development in git using more than one language you may want to set the merge and diff tools in a .gitconfig in the repository root.  This way that setting applies to only that repo and you can use the text merge and diff tools for other languages.  

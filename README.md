@@ -35,6 +35,8 @@ Most commonly the issue with pushing is that there have been changes to files on
 
 Pull errors most commonly result in there being changes in both the local and remote to the same file.  For text files there is a merge process.  Binary files (*.vi, *.vit, *.ctl ect) either need an external diff tool or you can choose 'ours' or 'theirs'
 
+See [git LabVIEW setup](.\LabVIEWGitCompSetup.md)
+
 If you want to go back and un-stage commits when you get this error you will first have to use the ```git merge --abort``` to cancel the merge
 
 If you do not want to bother you can do a pull with ```git pull -Xtheirs``` to just accept the remotes version of the file.
