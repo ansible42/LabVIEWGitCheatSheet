@@ -31,12 +31,32 @@ Pushing to remote.
 
 Most commonly the issue with pushing is that there have been changes to files on the remote since your last pull.  Resolution to this is using the ```git pull``` before you push.  
 
-### Resolving pull errors ###
+### Resolving Pull Errors ###
 
 Pull errors most commonly result in there being changes in both the local and remote to the same file.  For text files there is a merge process.  Binary files (*.vi, *.vit, *.ctl ect) either need an external diff tool or you can choose 'ours' or 'theirs'
 
-See [git LabVIEW setup](.\LabVIEWGitCompSetup.md)
+See [git LabVIEW setup](https://github.com/ansible42/LabVIEWGitCheatSheet/blob/master/LabVIEWGitCompSetup.md) for more information on setting up diff and merge tools that work with LabVIEW. 
 
 If you want to go back and un-stage commits when you get this error you will first have to use the ```git merge --abort``` to cancel the merge
 
-If you do not want to bother you can do a pull with ```git pull -Xtheirs``` to just accept the remotes version of the file.
+If you do not want to submit your changes you can do a pull with ```git pull -Xtheirs``` to just accept the remote version of the files.  Use this with caution as it will overwrite the local files.  
+
+
+### Best Work Practices ###
+
+Always always use branches, this way you can locally branch swap to see the original files.  Branch swap workflow below.  It adds one extra step to your development but it will pay for itself soon enough.  
+
+Create a local branch 
+```git checkout -b <TopicBranch> ```  
+
+Do your work 
+``` git add <file>```
+``` git commit -m <comment>```
+
+You forgot something from before. So swap back to the original.  
+```git checkout master ```
+
+To switch back to your topic branch 
+```git checkout <TopicBranch> ```  
+
+At this point you can either to a merge with the local master before pushing to the remote.  Or you can turn it into a remote branch, this is recommended if you want other team members to work on the branched codebase.  To turn a local branch into a remote branch do a ```git push -u origin <TopicBranch>```
