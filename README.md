@@ -7,10 +7,11 @@
 
 ``` git pull ``` reaches out to the remote and pulls the latest version down, will trigger a merge if there are conflicts 
 
-``` git status``` 
+
+``` git status``` Returns status of which files have been modified (worksapace vs index). 
 
 
-Do your work
+Move files into the index also called 'staged for commit' 
 
 ``` git add [filename]```  stages a specific file for commit to the local repository   
 ``` git add -A```  stages all files that are different from the HEAD for commit to the local repository   
@@ -35,7 +36,7 @@ Most commonly the issue with pushing is that there have been changes to files on
 
 Pull errors most commonly result in there being changes in both the local and remote to the same file.  For text files there is a merge process.  Binary files (*.vi, *.vit, *.ctl ect) either need an external diff tool or you can choose 'ours' or 'theirs'
 
-See [git LabVIEW setup](https://github.com/ansible42/LabVIEWGitCheatSheet/blob/master/LabVIEWGitCompSetup.md) for more information on setting up diff and merge tools that work with LabVIEW. 
+See [git LabVIEW diff/merge setup](https://github.com/ansible42/LabVIEWGitCheatSheet/blob/master/LabVIEWGitCompSetup.md) for more information on setting up diff and merge tools that work with LabVIEW. 
 
 If you want to go back and un-stage commits when you get this error you will first have to use the ```git merge --abort``` to cancel the merge
 
@@ -60,3 +61,8 @@ To switch back to your topic branch
 ```git checkout <TopicBranch> ```  
 
 At this point you can either to a merge with the local master before pushing to the remote.  Or you can turn it into a remote branch, this is recommended if you want other team members to work on the branched codebase.  To turn a local branch into a remote branch do a ```git push -u origin <TopicBranch>```
+
+### Environment Setup ###
+
+LabVIEW projects kind of hate relative file paths and such so you it is best if all the developers us consistent file paths.  Ideally something simple like C:\\[RepoName] or C:\Code\\[RepoName]
+
