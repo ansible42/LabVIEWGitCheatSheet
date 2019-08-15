@@ -82,7 +82,9 @@ LabVIEW git repos should always include a .gitignore file I normally have someth
 ### .gitattributes ###
 
 This file sets the how git treats different file types. 
+
+I like to keep projects as binary files even though they are just xml, this way git will not mess with line endings or try and merge them.  You can also put .vi, .ctl, .vit and .vim files here if you want to not us the merge startigy outlined here.  
 ```
-*.vi binary 
+*.lvproj binary 
 
 
