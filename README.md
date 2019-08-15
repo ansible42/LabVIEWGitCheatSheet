@@ -1,14 +1,14 @@
 # git Cheat Sheet #
 
-NOTE (!) If you are coming to git for the first time forget what you know about how centralized source control works. Checkout dosn't mean what you think it means. Git was originally written by and for Linux OS development by Linus Torvalds; decentralized power, radical ideas on the indiviuals power in society and the fact that Linus has a odd sense of humor should all be kept in mind when learning git.   
+NOTE! If you are coming to git for the first time forget what you know about how centralized source control works. Checkout dosn't mean what you think it means. Git was originally written by and for Linux OS development by Linus Torvalds; decentralized power, radical ideas on the indiviuals power in society and the fact that Linus has a odd sense of humor should all be kept in mind when learning git.   
 
-##Basic function set##
+## Basic function set ##
 
 ![MgaV9.png](https://github.com/ansible42/takednGitCheatSheet/blob/master/2037853081-MgaV9.png)
 
+```git checkout ``` If you are used to working with SVN or Perforce this may be the hardest one to get used to. Checkout it gitland is used to move bettwene branches in the local repository, it has nothing to do with interactions with the rempote (sever) 
 
 ``` git pull ``` reaches out to the remote and pulls the latest version down, will trigger a merge if there are conflicts 
-
 
 ``` git status``` Returns status of which files have been modified (worksapace vs index). 
 
