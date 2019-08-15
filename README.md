@@ -1,5 +1,7 @@
 # git Cheat Sheet #
 
+NOTE (!) 
+
 ## Typical Workflow ##
 
 ![MgaV9.png](https://github.com/ansible42/takednGitCheatSheet/blob/master/2037853081-MgaV9.png)
