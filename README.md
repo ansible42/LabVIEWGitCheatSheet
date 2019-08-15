@@ -64,5 +64,21 @@ At this point you can either to a merge with the local master before pushing to 
 
 ### Environment Setup ###
 
-LabVIEW projects kind of hate relative file paths and such so you it is best if all the developers us consistent file paths.  Ideally something simple like C:\\[RepoName] or C:\Code\\[RepoName]
+LabVIEW is sensitive about file paths, so keep all dependencies at a lower level from the project. 
+
+### .gitignore ### 
+
+LabVIEW git repos should always include a .gitignore file I normally have something like this. Passing these files into the repo makes no difference and prevents constant changes in your staging area.  
+``` 
+*.lvlps
+*.aliases
+*.orig
+```
+
+### .gitattributes ###
+
+This file sets the how git treats different file types. 
+```
+*.vi binary 
+
 
