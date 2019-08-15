@@ -1,8 +1,8 @@
 # git Cheat Sheet #
 
-NOTE (!) 
+NOTE (!) If you are coming to git for the first time forget what you know about how centralized source control works. Checkout dosn't mean what you think it means. Git was originally written by and for Linux OS development by Linus Torvalds; decentralized power, radical ideas on the indiviuals power in society and the fact that Linus has a odd sense of humor should all be kept in mind when learning git.   
 
-## Typical Workflow ##
+##Basic function set##
 
 ![MgaV9.png](https://github.com/ansible42/takednGitCheatSheet/blob/master/2037853081-MgaV9.png)
 
