@@ -4,6 +4,8 @@ NOTE! If you are coming to git for the first time forget what you know about how
 
 ## Basic function set ##
 
+```git clone [url] [dir]``` This is what you use to retireve a remote repoistory for the first time.  It will clone in to the working directory if you do not provide it with a relative or absolute directory path. 
+
 ![MgaV9.png](https://github.com/ansible42/takednGitCheatSheet/blob/master/2037853081-MgaV9.png)
 
 ```git checkout ``` If you are used to working with SVN or Perforce this may be the hardest one to get used to. Checkout it gitland is used to move bettwene branches in the local repository, it has nothing to do with interactions with the rempote (sever) 
