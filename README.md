@@ -74,9 +74,17 @@ LabVIEW is sensitive about file paths, so keep all dependencies at a lower level
 
 LabVIEW git repos should always include a .gitignore file I normally have something like this. Passing these files into the repo makes no difference and prevents constant changes in your staging area.  
 ``` 
-*.lvlps
+**/builds/
+**/build/
+*.bldcache
 *.aliases
-*.orig
+*.lvlps
+*.md5
+*.db
+*.exe 
+*.nipkg
+*.ipk
+
 ```
 
 ### .gitattributes ###
@@ -85,6 +93,21 @@ This file sets the how git treats different file types.
 
 I like to keep projects as binary files even though they are just xml, this way git will not mess with line endings or try and merge them.  You can also put .vi, .ctl, .vit and .vim files here if you want to not us the merge startigy outlined [here](https://github.com/ansible42/LabVIEWGitCheatSheet/blob/master/LabVIEWGitCompSetup.md).  
 ```
-*.lvproj binary 
-
+*.lvproj -merge
+*.lvlib -merge
+*.lvclass -merge
+*.xctl -merge
+*.xnode -merge
+*.lvsc -merge
+*.ctl filter=lfs diff=lfs merge=lfs -text
+*.lvlibp filter=lfs diff=lfs merge=lfs -text
+*.llb filter=lfs diff=lfs merge=lfs -text
+*.vi filter=lfs diff=lfs merge=lfs -text
+*.vit filter=lfs diff=lfs merge=lfs -text
+*.vim filter=lfs diff=lfs merge=lfs -text
+*.ctt filter=lfs diff=lfs merge=lfs -text
+*.vip filter=lfs diff=lfs merge=lfs -text
+*.vipb filter=lfs diff=lfs merge=lfs -text
+```
+This marks the xml files (lvproj, lvlib,lvclass and such) to be not merged during an auto merge. Marking all of the binary files as LFS will save you time and space in storeage and will resolve some issues during merges.  
 
